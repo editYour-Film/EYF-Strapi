@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_page_home_comparison_sections",
+  "info": {
+    "displayName": "Comparison_section"
+  },
+  "options": {},
+  "attributes": {
+    "classic_content": {
+      "displayName": "Classic content",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.classic-content"
+    },
+    "comparison_cards": {
+      "displayName": "Comparison cards",
+      "type": "component",
+      "repeatable": true,
+      "component": "page-home.comparison-cards"
+    }
+  }
+}

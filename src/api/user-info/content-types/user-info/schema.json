@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_infos",
+  "info": {
+    "singularName": "user-info",
+    "pluralName": "user-infos",
+    "displayName": "user info",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "f_name": {
+      "type": "string"
+    },
+    "l_name": {
+      "type": "string"
+    },
+    "address": {
+      "type": "text"
+    },
+    "post_code": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "bio": {
+      "type": "richtext"
+    },
+    "languages": {
+      "type": "string"
+    },
+    "picture": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "user_account": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "editor_videos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::editor-video.editor-video",
+      "private": true,
+      "mappedBy": "user_info"
+    }
+  }
+}

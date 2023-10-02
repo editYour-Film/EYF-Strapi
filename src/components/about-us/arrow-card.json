@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_about_us_arrow_cards",
+  "info": {
+    "displayName": "arrow card"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "text"
+    }
+  }
+}

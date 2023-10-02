@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "cookies_pages",
+  "info": {
+    "singularName": "cookies-page",
+    "pluralName": "cookies-pages",
+    "displayName": "Politique cookies",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    }
+  }
+}

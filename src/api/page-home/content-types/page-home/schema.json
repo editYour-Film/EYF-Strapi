@@ -1,0 +1,79 @@
+{
+  "kind": "singleType",
+  "collectionName": "page_homes",
+  "info": {
+    "singularName": "page-home",
+    "pluralName": "page-homes",
+    "displayName": "Home",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "section1": {
+      "type": "component",
+      "repeatable": false,
+      "component": "page-home.page-home-section1"
+    },
+    "section2": {
+      "type": "component",
+      "repeatable": false,
+      "component": "page-home.page-home-section2"
+    },
+    "section3": {
+      "type": "component",
+      "repeatable": false,
+      "component": "page-home.page-home-section3"
+    },
+    "section4": {
+      "type": "component",
+      "repeatable": false,
+      "component": "page-home.page-home-section4"
+    },
+    "section5": {
+      "type": "component",
+      "repeatable": false,
+      "component": "page-home.page-home-section5"
+    },
+    "section6": {
+      "type": "component",
+      "repeatable": false,
+      "component": "page-home.page-home-section6"
+    },
+    "production": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "top_video": {
+      "type": "component",
+      "repeatable": false,
+      "component": "video.video"
+    },
+    "head": {
+      "displayName": "head",
+      "type": "component",
+      "repeatable": false,
+      "component": "page-home.head"
+    },
+    "marquee": {
+      "displayName": "marquee",
+      "type": "component",
+      "repeatable": false,
+      "component": "page-home.marquee"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    },
+    "comparison_section": {
+      "displayName": "Comparison_section",
+      "type": "component",
+      "repeatable": false,
+      "component": "page-home.comparison-section"
+    }
+  }
+}

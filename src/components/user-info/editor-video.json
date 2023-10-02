@@ -1,0 +1,57 @@
+{
+  "collectionName": "components_user_info_editor_videos",
+  "info": {
+    "displayName": "editor video",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "video": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "videos"
+      ]
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "length": {
+      "type": "string"
+    },
+    "model": {
+      "type": "enumeration",
+      "enum": [
+        "model 16/9 ème",
+        "model 9/16 ème",
+        "Carré",
+        "Mobile"
+      ]
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "tags": {
+      "type": "text"
+    },
+    "resources": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

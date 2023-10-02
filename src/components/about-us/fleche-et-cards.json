@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_about_us_fleche_et_cards",
+  "info": {
+    "displayName": "Fleche et cards",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "arrow_card": {
+      "displayName": "arrow card",
+      "type": "component",
+      "repeatable": true,
+      "component": "about-us.arrow-card"
+    },
+    "title": {
+      "type": "string"
+    },
+    "suptitle": {
+      "type": "string"
+    }
+  }
+}

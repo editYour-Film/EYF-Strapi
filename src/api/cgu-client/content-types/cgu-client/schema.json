@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "cgu_clients",
+  "info": {
+    "singularName": "cgu-client",
+    "pluralName": "cgu-clients",
+    "displayName": "CGU clients"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "collectionName": "components_user_info_user_infos",
+  "info": {
+    "displayName": "user info",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "f_name": {
+      "type": "string"
+    },
+    "l_name": {
+      "type": "string"
+    },
+    "address": {
+      "type": "text"
+    },
+    "post_code": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "bio": {
+      "type": "text"
+    },
+    "languages": {
+      "type": "string"
+    },
+    "picture": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "videos": {
+      "type": "component",
+      "repeatable": true,
+      "component": "user-info.editor-video"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_page_home_page_home_section2s",
+  "info": {
+    "displayName": "page-home-section2",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "section_title": {
+      "type": "string"
+    },
+    "title1": {
+      "type": "string"
+    },
+    "title2": {
+      "type": "string"
+    },
+    "videos": {
+      "type": "component",
+      "repeatable": true,
+      "component": "video.video"
+    }
+  }
+}

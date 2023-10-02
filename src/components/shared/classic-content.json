@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_classic_contents",
+  "info": {
+    "displayName": "Classic content"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "suptitle": {
+      "type": "string"
+    },
+    "content": {
+      "type": "text"
+    }
+  }
+}

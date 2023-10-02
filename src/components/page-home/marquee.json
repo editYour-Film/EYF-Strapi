@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_page_home_marquees",
+  "info": {
+    "displayName": "marquee"
+  },
+  "options": {},
+  "attributes": {
+    "line_1": {
+      "type": "text"
+    },
+    "line_2": {
+      "type": "text"
+    }
+  }
+}

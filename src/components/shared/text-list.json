@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_shared_text_lists",
+  "info": {
+    "displayName": "text-list"
+  },
+  "options": {},
+  "attributes": {
+    "entry": {
+      "type": "string"
+    }
+  }
+}

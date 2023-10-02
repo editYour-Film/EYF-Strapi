@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_blog_authors",
+  "info": {
+    "displayName": "Author"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "profile_picture": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

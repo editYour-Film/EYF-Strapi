@@ -1,0 +1,70 @@
+{
+  "kind": "collectionType",
+  "collectionName": "editor_videos",
+  "info": {
+    "singularName": "editor-video",
+    "pluralName": "editor-videos",
+    "displayName": "editor video",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "video": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "videos"
+      ]
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "length": {
+      "type": "string"
+    },
+    "model": {
+      "type": "enumeration",
+      "enum": [
+        "model 16/9 ème",
+        "model 9/16 ème",
+        "Carré",
+        "Mobile"
+      ]
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "tags": {
+      "type": "string"
+    },
+    "resources": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "user_info": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::user-info.user-info",
+      "inversedBy": "editor_videos"
+    }
+  }
+}

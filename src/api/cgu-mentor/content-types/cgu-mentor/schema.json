@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "cgu_mentors",
+  "info": {
+    "singularName": "cgu-mentor",
+    "pluralName": "cgu-mentors",
+    "displayName": "CGU mentors",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    }
+  }
+}

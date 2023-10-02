@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_page_home_comparison_cards",
+  "info": {
+    "displayName": "Comparison cards",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "text_list": {
+      "displayName": "text-list",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.text-list"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "pro",
+        "cons"
+      ]
+    }
+  }
+}
