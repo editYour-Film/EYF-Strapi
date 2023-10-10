@@ -46,9 +46,6 @@
     "description": {
       "type": "richtext"
     },
-    "tags": {
-      "type": "string"
-    },
     "resources": {
       "type": "media",
       "multiple": true,
@@ -65,6 +62,35 @@
       "relation": "manyToOne",
       "target": "api::user-info.user-info",
       "inversedBy": "editor_videos"
+    },
+    "visibility": {
+      "type": "enumeration",
+      "enum": [
+        "public",
+        "private",
+        "unrepertoried"
+      ]
+    },
+    "copywrite": {
+      "type": "text"
+    },
+    "worktime": {
+      "type": "enumeration",
+      "enum": [
+        "base",
+        "medium",
+        "high"
+      ]
+    },
+    "video_tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::video-tag.video-tag",
+      "inversedBy": "editor_videos"
+    },
+    "is_highlighted": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
