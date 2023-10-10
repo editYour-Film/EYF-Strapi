@@ -30,9 +30,6 @@
     "phone": {
       "type": "string"
     },
-    "bio": {
-      "type": "richtext"
-    },
     "languages": {
       "type": "string"
     },
@@ -61,6 +58,9 @@
     },
     "email_contact": {
       "type": "string"
+    },
+    "bio": {
+      "type": "text"
     }
   }
 }
