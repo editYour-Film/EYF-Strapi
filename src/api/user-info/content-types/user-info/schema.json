@@ -55,6 +55,12 @@
       "target": "api::editor-video.editor-video",
       "private": true,
       "mappedBy": "user_info"
+    },
+    "skills": {
+      "type": "string"
+    },
+    "email_contact": {
+      "type": "string"
     }
   }
 }
