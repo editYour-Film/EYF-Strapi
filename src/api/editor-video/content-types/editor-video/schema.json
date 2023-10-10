@@ -43,9 +43,6 @@
         "Mobile"
       ]
     },
-    "description": {
-      "type": "richtext"
-    },
     "resources": {
       "type": "media",
       "multiple": true,
@@ -91,6 +88,9 @@
     "is_highlighted": {
       "type": "boolean",
       "default": false
+    },
+    "description": {
+      "type": "text"
     }
   }
 }
