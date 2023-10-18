@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_about_us_texte_et_descriptions",
+  "info": {
+    "displayName": "texte et description"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "text"
+    }
+  }
+}
