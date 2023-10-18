@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "skills",
+  "info": {
+    "singularName": "skill",
+    "pluralName": "skills",
+    "displayName": "Skill",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "user_infos": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::user-info.user-info",
+      "private": true,
+      "inversedBy": "skills"
+    }
+  }
+}

@@ -21,6 +21,9 @@
     "address": {
       "type": "text"
     },
+    "address_more": {
+      "type": "text"
+    },
     "post_code": {
       "type": "string"
     },
@@ -53,14 +56,17 @@
       "private": true,
       "mappedBy": "user_info"
     },
-    "skills": {
-      "type": "string"
-    },
     "email_contact": {
       "type": "string"
     },
     "bio": {
       "type": "text"
+    },
+    "skills": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::skill.skill",
+      "mappedBy": "user_infos"
     }
   }
 }
