@@ -8,7 +8,7 @@
     "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
@@ -19,6 +19,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::user-info.user-info",
+      "private": true,
       "inversedBy": "skills"
     }
   }
