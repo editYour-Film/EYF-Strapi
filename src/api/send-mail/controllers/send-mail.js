@@ -6,9 +6,9 @@ module.exports = {
       try {
         await strapi.plugins["email"].services.email.send({
           to: ctx.request.body.email,
-          from: "contact@edityour.film",
+          from: process.env.STRAPI_ADMIN_EMAIL_SENDER,
           subject: ctx.request.body.subject,
-          text: "Bonjour " + ctx.request.body.email,
+          text: ctx.request.body.text,
         });
         return true;
       } catch {
