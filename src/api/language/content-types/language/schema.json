@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "skills",
+  "collectionName": "languages",
   "info": {
-    "singularName": "skill",
-    "pluralName": "skills",
-    "displayName": "Skill",
+    "singularName": "language",
+    "pluralName": "languages",
+    "displayName": "language",
     "description": ""
   },
   "options": {
