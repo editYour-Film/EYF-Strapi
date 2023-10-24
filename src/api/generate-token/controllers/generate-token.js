@@ -8,12 +8,12 @@ const expireTime = () => {
 };
 
 // generate random 6 digits
-const characters = "123456789EYF";
+const characters = "123456789EDY";
 const codeLength = 6;
 let code = "";
 for (let i = 0; i < codeLength; i++) {
-    const randomIndex = Math.floor(Math.random() * characters.length);
-    code += characters[randomIndex];
+  const randomIndex = Math.floor(Math.random() * characters.length);
+  code += characters[randomIndex];
 }
 const token = String(code);
 

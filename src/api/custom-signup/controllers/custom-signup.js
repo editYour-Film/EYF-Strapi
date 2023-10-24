@@ -38,6 +38,7 @@ module.exports = {
                   email: tempUserAccount.email.toLowerCase(),
                   username: tempUserAccount.email.toLowerCase(),
                   role: tempUserAccount.role,
+                  confirmed: true,
                 },
               });
             if (createUserAccount) {
@@ -73,6 +74,7 @@ module.exports = {
       const updateAccount = await strapi.db
         .query("plugin::users-permissions.user")
         .update({
+          populate: true,
           where: { email: ctx.request.body.email.toLowerCase() },
           data: {
             username: ctx.request.body.username,
@@ -83,6 +85,7 @@ module.exports = {
         const updateAccountInfo = await strapi.db
           .query("api::user-info.user-info")
           .update({
+            populate: true,
             where: { user_account: updateAccount.id },
             data: {
               f_name: ctx.request.body.f_name,
@@ -92,8 +95,21 @@ module.exports = {
               skills: ctx.request.body.skills,
             },
           });
-        if (updateAccountInfo) return true;
-        else return "error when updating account";
+
+        if (updateAccountInfo) {
+          if (updateAccountInfo) updateAccountInfo.user_account = undefined;
+          return {
+            jwt: process.env.STRAPI_ADMIN_API_TOKEN_SALT,
+            user: {
+              createdAt: updateAccount.createdAt,
+              email: updateAccount.email,
+              id: updateAccount.id,
+              username: updateAccount.username,
+              role: updateAccount.role,
+            },
+            details: updateAccountInfo,
+          };
+        } else return "error when updating account";
       } else return "error when updating account";
     }
   },
