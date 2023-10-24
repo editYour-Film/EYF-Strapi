@@ -8,10 +8,14 @@ const expireTime = () => {
 };
 
 // generate random 6 digits
-const token = String(Math.floor(100000 + Math.random() * 900000)).replace(
-  /0/gi,
-  "1"
-);
+const characters = "123456789EYF";
+const codeLength = 6;
+let code = "";
+for (let i = 0; i < codeLength; i++) {
+    const randomIndex = Math.floor(Math.random() * characters.length);
+    code += characters[randomIndex];
+}
+const token = String(code);
 
 module.exports = {
   async generate(ctx, next) {
@@ -22,18 +26,6 @@ module.exports = {
         .findOne({ where: { email: ctx.request.body.email } });
 
       if (userAccount) {
-        // generate random 6 digits
-        const characters = "123456789EYF";
-        const codeLength = 6;
-        let code = "";
-
-        for (let i = 0; i < codeLength; i++) {
-            const randomIndex = Math.floor(Math.random() * characters.length);
-            code += characters[randomIndex];
-        }
-
-        const token = String(code);
-
         const updateQuery = await strapi.db
           .query("plugin::users-permissions.user")
           .update({
