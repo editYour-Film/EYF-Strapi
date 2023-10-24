@@ -18,16 +18,20 @@
         "global",
         "message",
         "mission"
-      ]
+      ],
+      "required": true
     },
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "description": {
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "date": {
-      "type": "datetime"
+      "type": "datetime",
+      "required": true
     },
     "user": {
       "type": "relation",
