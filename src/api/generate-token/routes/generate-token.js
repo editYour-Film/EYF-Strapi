@@ -11,5 +11,14 @@ module.exports = {
         middlewares: [],
       },
     },
+    {
+      method: "POST",
+      path: "/generate-token-signup",
+      handler: "generate-token.generateSignup",
+      config: {
+        policies: [],
+        middlewares: [],
+      },
+    },
   ],
 };

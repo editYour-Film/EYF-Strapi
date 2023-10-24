@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pre_signup_users",
+  "info": {
+    "singularName": "pre-signup-user",
+    "pluralName": "pre-signup-users",
+    "displayName": "pre signup user",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "string"
+    },
+    "token": {
+      "type": "string"
+    },
+    "expire": {
+      "type": "datetime"
+    },
+    "role": {
+      "type": "string"
+    }
+  }
+}
