@@ -4,7 +4,8 @@
   "info": {
     "singularName": "notification",
     "pluralName": "notifications",
-    "displayName": "Notification"
+    "displayName": "Notification",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -27,6 +28,12 @@
     },
     "date": {
       "type": "datetime"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::user-info.user-info",
+      "inversedBy": "notifications"
     }
   }
 }
