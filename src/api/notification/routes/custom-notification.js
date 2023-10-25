@@ -11,6 +11,10 @@ module.exports = {
         method: 'POST',
         path: '/notification/global', 
         handler: 'custom-notification.postGlobal',
+        config: {
+          policies: [],
+          middlewares: [],
+        },
       }
     ]
   }
