@@ -11,5 +11,14 @@ module.exports = {
         middlewares: [],
       },
     },
+    {
+      method: "POST",
+      path: "/custom-register",
+      handler: "custom-signup.register",
+      config: {
+        policies: [],
+        middlewares: [],
+      },
+    },
   ],
 };

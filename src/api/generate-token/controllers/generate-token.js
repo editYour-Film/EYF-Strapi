@@ -8,13 +8,21 @@ const expireTime = () => {
 };
 
 // generate random 6 digits
-const token = String(Math.floor(100000 + Math.random() * 900000)).replace(
-  /0/gi,
-  "1"
-);
+const generateToken = () => {
+  const characters = "123456789EDY";
+  const codeLength = 6;
+  let code = "";
+  for (let i = 0; i < codeLength; i++) {
+    const randomIndex = Math.floor(Math.random() * characters.length);
+    code += characters[randomIndex];
+  }
+  return code;
+};
 
 module.exports = {
   async generate(ctx, next) {
+    const token = generateToken();
+
     if (ctx.request.body.email && ctx.request.body.email.length > 0) {
       // check user
       const userAccount = await strapi.db
@@ -50,6 +58,8 @@ module.exports = {
   },
 
   async generateSignup(ctx, next) {
+    const token = generateToken();
+
     if (ctx.request.body.email && ctx.request.body.email.length > 0) {
       // check user
       const userAccount = await strapi.db
@@ -74,8 +84,6 @@ module.exports = {
                 expire: expireTime(),
               },
             });
-
-          console.log("updateQuery", updateQuery);
 
           if (updateQuery) {
             try {
