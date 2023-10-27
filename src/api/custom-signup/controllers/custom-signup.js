@@ -2,7 +2,6 @@
 
 module.exports = {
   async signup(ctx, next) {
-    console.log(ctx.request.body.picture);
     if (
       ctx.request.body.email &&
       ctx.request.body.token &&
