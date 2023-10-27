@@ -68,6 +68,12 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::language.language"
+    },
+    "notifications": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::notification.notification",
+      "mappedBy": "user"
     }
   }
 }

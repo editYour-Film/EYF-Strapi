@@ -2,7 +2,6 @@
 
 module.exports = {
   async signup(ctx, next) {
-    console.log(ctx.request.body.picture);
     if (
       ctx.request.body.email &&
       ctx.request.body.token &&
@@ -91,8 +90,8 @@ module.exports = {
               f_name: ctx.request.body.f_name,
               l_name: ctx.request.body.l_name,
               bio: ctx.request.body.description,
-              languages: ctx.request.body.languages,
-              skills: ctx.request.body.skills,
+              languages: ctx.request.body["languages[]"],
+              skills: ctx.request.body["skills[]"],
             },
           });
 
