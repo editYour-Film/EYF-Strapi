@@ -90,8 +90,8 @@ module.exports = {
               f_name: ctx.request.body.f_name,
               l_name: ctx.request.body.l_name,
               bio: ctx.request.body.description,
-              languages: ctx.request.body.languages,
-              skills: ctx.request.body.skills,
+              languages: ctx.request.body["languages[]"],
+              skills: ctx.request.body["skills[]"],
             },
           });
 
