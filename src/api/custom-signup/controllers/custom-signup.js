@@ -48,6 +48,7 @@ module.exports = {
                   where: { id: tempUserAccount.id },
                 });
 
+              // create user info account
               const createUserInfoAccount = await strapi.db
                 .query("api::user-info.user-info")
                 .create({
@@ -64,6 +65,24 @@ module.exports = {
           } else return "token expired";
         }
       } else return "account not found";
+    }
+  },
+
+  async signupEmpty(ctx, next) {
+    if (ctx.request.body.accountId) {
+      // create user info account
+      const createUserInfoAccount = await strapi.db
+        .query("api::user-info.user-info")
+        .create({
+          data: {
+            f_name: "",
+            l_name: "",
+            user_account: ctx.request.body.accountId,
+          },
+        });
+
+      if (createUserInfoAccount) return true;
+      else return "error when creating account";
     }
   },
 
@@ -99,9 +118,9 @@ module.exports = {
           if (updateAccountInfo) updateAccountInfo.user_account = undefined;
           return {
             jwt:
-              userAccount.role.type === "editor"
+              updateAccount.role.type === "editor"
                 ? process.env.STRAPI_ADMIN_API_EDITOR_TOKEN_SALT
-                : STRAPI_ADMIN_API_CREATOR_TOKEN_SALT,
+                : process.env.STRAPI_ADMIN_API_CREATOR_TOKEN_SALT,
             user: {
               createdAt: updateAccount.createdAt,
               email: updateAccount.email,
