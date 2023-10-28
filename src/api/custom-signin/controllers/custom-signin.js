@@ -36,7 +36,10 @@ module.exports = {
             if (userInfo) userInfo.user_account = undefined;
 
             return {
-              jwt: process.env.STRAPI_ADMIN_API_TOKEN_SALT,
+              jwt:
+                userAccount.role.type === "editor"
+                  ? process.env.STRAPI_ADMIN_API_EDITOR_TOKEN_SALT
+                  : STRAPI_ADMIN_API_CREATOR_TOKEN_SALT,
               user: {
                 createdAt: userAccount.createdAt,
                 email: userAccount.email,
