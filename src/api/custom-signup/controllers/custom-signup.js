@@ -87,7 +87,11 @@ module.exports = {
   },
 
   async register(ctx, next) {
-    if (ctx.request.body.email && ctx.request.body.email.length > 0) {
+    if (
+      ctx.request.body.email &&
+      ctx.request.body.email.length > 0 &&
+      ctx.request.body.role.length > 0
+    ) {
       // update user
       const updateAccount = await strapi.db
         .query("plugin::users-permissions.user")
@@ -96,6 +100,7 @@ module.exports = {
           where: { email: ctx.request.body.email.toLowerCase() },
           data: {
             username: ctx.request.body.username,
+            role: ctx.request.body.role,
           },
         });
 
