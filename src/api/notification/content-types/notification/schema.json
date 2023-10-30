@@ -16,9 +16,8 @@
       "type": "enumeration",
       "enum": [
         "everyone",
-        "all-monteur",
+        "all-editor",
         "all-client",
-        "all-public",
         "message",
         "mission"
       ],
