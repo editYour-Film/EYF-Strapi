@@ -15,7 +15,10 @@
     "type": {
       "type": "enumeration",
       "enum": [
-        "global",
+        "everyone",
+        "all-monteur",
+        "all-client",
+        "all-public",
         "message",
         "mission"
       ],
