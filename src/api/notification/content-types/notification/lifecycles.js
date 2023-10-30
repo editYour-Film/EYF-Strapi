@@ -7,11 +7,13 @@ module.exports = {
 
     if (data.type === "everyone") {
         userInfos = await strapi.entityService.findMany('api::user-info.user-info')
-    } else if (data.type === "all-editor") {
+    } else if (data.type === "all-editor" || data.type === "all-client") {
+      const role = data.type === "all-editor" ? "editor" : "client";
+
       const users = await strapi.entityService.findMany('plugin::users-permissions.user', {
         filters: {
           role: {
-            name: 'editor',
+            name: role,
           },
         },
         populate: ['role']
