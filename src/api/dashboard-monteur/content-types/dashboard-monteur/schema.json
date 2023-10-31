@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "dashboard_monteurs",
+  "info": {
+    "singularName": "dashboard-monteur",
+    "pluralName": "dashboard-monteurs",
+    "displayName": "Dashboard monteur",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "add_model": {
+      "displayName": "add-model",
+      "type": "component",
+      "repeatable": false,
+      "component": "add-model.add-model"
+    }
+  }
+}
