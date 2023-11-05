@@ -11,5 +11,14 @@ module.exports = {
         middlewares: [],
       },
     },
+    {
+      method: "POST",
+      path: "/validate-user-by-code",
+      handler: "user.validateUserByCode",
+      config: {
+        policies: [],
+        middlewares: [],
+      },
+    },
   ],
 };

@@ -46,6 +46,7 @@ module.exports = {
                 id: userAccount.id,
                 username: userAccount.username,
                 role: userAccount.role,
+                code: userAccount.customConfirmationToken,
               },
               details: userInfo,
               models: userInfo.editor_videos,

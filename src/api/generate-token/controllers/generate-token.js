@@ -41,16 +41,24 @@ module.exports = {
           });
 
         if (updateQuery) {
-          try {
-            await strapi.plugins["email"].services.email.send({
-              to: ctx.request.body.email,
-              from: process.env.STRAPI_ADMIN_EMAIL_SENDER,
-              subject: "Code de vérification de votre email",
-              text: "votre code de vérification est " + token,
-            });
+          console.log(ctx.request.body.sendEmail);
+          if (
+            ctx.request.body.sendEmail != undefined &&
+            ctx.request.body.sendEmail === false
+          )
             return true;
-          } catch {
-            return "email not sent";
+          else {
+            try {
+              await strapi.plugins["email"].services.email.send({
+                to: ctx.request.body.email,
+                from: process.env.STRAPI_ADMIN_EMAIL_SENDER,
+                subject: "Code de vérification de votre email",
+                text: "votre code de vérification est " + token,
+              });
+              return true;
+            } catch {
+              return "email not sent";
+            }
           }
         }
       } else return "email not found";
