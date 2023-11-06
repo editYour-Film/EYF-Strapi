@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_add_model_add_models",
+  "info": {
+    "displayName": "add-model",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "text"
+    }
+  }
+}

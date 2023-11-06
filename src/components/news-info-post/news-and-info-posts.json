@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_news_info_post_news_and_info_posts",
+  "info": {
+    "displayName": "news & info posts"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "excerpt": {
+      "type": "text"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "Tournage",
+        "Montage",
+        "Partenariat"
+      ]
+    },
+    "author": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "length": {
+      "type": "string"
+    },
+    "link": {
+      "type": "text"
+    }
+  }
+}
