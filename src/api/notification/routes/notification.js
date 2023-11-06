@@ -6,27 +6,29 @@
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-const defaultRouter = createCoreRouter('api::notification.notification');
+module.exports = createCoreRouter('api::notification.notification');
 
-const customRouter = (innerRouter, extraRoutes = []) => {
-  let routes;
-  return {
-    get prefix() {
-      return innerRouter.prefix;
-    },
-    get routes() {
-      if (!routes) routes = innerRouter.routes.concat(extraRoutes);
-      return routes;
-    },
-  };
-};
+// const defaultRouter = createCoreRouter('api::notification.notification');
 
-const myExtraRoutes = [
-  {
-    method: 'POST',
-    path: '/notifications/global',
-    handler: 'notification.postGlobal',
-  },
-];
+// const customRouter = (innerRouter, extraRoutes = []) => {
+//   let routes;
+//   return {
+//     get prefix() {
+//       return innerRouter.prefix;
+//     },
+//     get routes() {
+//       if (!routes) routes = innerRouter.routes.concat(extraRoutes);
+//       return routes;
+//     },
+//   };
+// };
 
-module.exports = customRouter(defaultRouter, myExtraRoutes);
+// const myExtraRoutes = [
+//   {
+//     method: 'POST',
+//     path: '/notifications/global',
+//     handler: 'notification.postGlobal',
+//   },
+// ];
+
+// module.exports = customRouter(defaultRouter, myExtraRoutes);

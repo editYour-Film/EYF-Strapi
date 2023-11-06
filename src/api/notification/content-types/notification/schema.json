@@ -15,7 +15,9 @@
     "type": {
       "type": "enumeration",
       "enum": [
-        "global",
+        "everyone",
+        "all-editor",
+        "all-client",
         "message",
         "mission"
       ],
