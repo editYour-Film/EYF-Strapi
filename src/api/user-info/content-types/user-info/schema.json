@@ -50,7 +50,6 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::editor-video.editor-video",
-      "private": true,
       "mappedBy": "user_info"
     },
     "email_contact": {
