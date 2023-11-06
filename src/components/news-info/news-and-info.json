@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_news_info_news_and_infos",
+  "info": {
+    "displayName": "News & Info",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "news_info_post": {
+      "displayName": "news & info posts",
+      "type": "component",
+      "repeatable": true,
+      "component": "news-info-post.news-and-info-posts"
+    },
+    "info_card": {
+      "displayName": "info card",
+      "type": "component",
+      "repeatable": false,
+      "component": "info-card.info-card"
+    }
+  }
+}
