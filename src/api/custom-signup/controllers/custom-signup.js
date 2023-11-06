@@ -1,5 +1,24 @@
 "use strict";
 
+const expireTime = () => {
+  const date = new Date();
+  // expire after one hour
+  date.setTime(date.getTime() + 1 * 60 * 60 * 1000);
+  return date;
+};
+
+// generate random 6 digits
+const generateToken = () => {
+  const characters = "123456789EDY";
+  const codeLength = 6;
+  let code = "";
+  for (let i = 0; i < codeLength; i++) {
+    const randomIndex = Math.floor(Math.random() * characters.length);
+    code += characters[randomIndex];
+  }
+  return code;
+};
+
 module.exports = {
   async signup(ctx, next) {
     if (
@@ -81,7 +100,17 @@ module.exports = {
           },
         });
 
-      if (createUserInfoAccount) return true;
+      const updateAccount = await strapi.db
+        .query("plugin::users-permissions.user")
+        .update({
+          where: { id: ctx.request.body.accountId },
+          data: {
+            customConfirmationToken: generateToken(),
+            expire: expireTime(),
+          },
+        });
+
+      if (createUserInfoAccount && updateAccount) return true;
       else return "error when creating account";
     }
   },
@@ -132,6 +161,7 @@ module.exports = {
               id: updateAccount.id,
               username: updateAccount.username,
               role: updateAccount.role,
+              code: updateAccount.customConfirmationToken,
             },
             details: updateAccountInfo,
           };
