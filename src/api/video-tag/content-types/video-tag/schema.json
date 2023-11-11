@@ -17,12 +17,6 @@
     "slug": {
       "type": "uid",
       "targetField": "name"
-    },
-    "editor_videos": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::editor-video.editor-video",
-      "mappedBy": "video_tags"
     }
   }
 }

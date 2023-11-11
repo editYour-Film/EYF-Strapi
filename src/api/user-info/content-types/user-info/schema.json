@@ -21,9 +21,6 @@
     "address": {
       "type": "text"
     },
-    "address_more": {
-      "type": "text"
-    },
     "post_code": {
       "type": "string"
     },
@@ -52,9 +49,6 @@
       "target": "api::editor-video.editor-video",
       "mappedBy": "user_info"
     },
-    "email_contact": {
-      "type": "string"
-    },
     "bio": {
       "type": "text"
     },
@@ -73,6 +67,9 @@
       "relation": "manyToMany",
       "target": "api::notification.notification",
       "mappedBy": "user"
+    },
+    "birthday": {
+      "type": "date"
     }
   }
 }
