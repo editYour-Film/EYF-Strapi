@@ -41,7 +41,6 @@ module.exports = {
           });
 
         if (updateQuery) {
-          console.log(ctx.request.body.sendEmail);
           if (
             ctx.request.body.sendEmail != undefined &&
             ctx.request.body.sendEmail === false

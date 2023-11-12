@@ -53,8 +53,6 @@ module.exports = {
                 x.user_info = undefined;
               });
 
-            console.log(editorVideo);
-
             return {
               jwt:
                 userAccount.role.type === "editor"
