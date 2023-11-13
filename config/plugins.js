@@ -45,9 +45,9 @@ module.exports = ({ env }) => ({
         apiKey: env("SENDGRID_API_KEY"),
       },
       settings: {
-        defaultFrom: "contact@edityour.film",
-        defaultReplyTo: "contact@edityour.film",
-        testAddress: "contact@edityour.film",
+        defaultFrom: env("STRAPI_ADMIN_EMAIL_SENDER"),
+        defaultReplyTo: env("STRAPI_ADMIN_EMAIL_SENDER"),
+        testAddress: env("STRAPI_ADMIN_EMAIL_SENDER"),
       },
     },
   },
