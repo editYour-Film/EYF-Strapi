@@ -98,6 +98,10 @@
     },
     "audio": {
       "type": "string"
+    },
+    "approved": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

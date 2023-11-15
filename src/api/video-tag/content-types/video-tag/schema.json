@@ -4,7 +4,8 @@
   "info": {
     "singularName": "video-tag",
     "pluralName": "video-tags",
-    "displayName": "Video tag"
+    "displayName": "Video tag",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -17,6 +18,10 @@
     "slug": {
       "type": "uid",
       "targetField": "name"
+    },
+    "approved": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
