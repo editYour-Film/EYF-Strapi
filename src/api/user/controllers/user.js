@@ -34,23 +34,42 @@ module.exports = {
                 user_account: userAccount.id,
               },
             });
-          if (userInfo) userInfo.user_account = undefined;
-          return {
-            jwt:
-              userAccount.role.type === "editor"
-                ? process.env.STRAPI_ADMIN_API_EDITOR_TOKEN_SALT
-                : process.env.STRAPI_ADMIN_API_CREATOR_TOKEN_SALT,
-            user: {
-              createdAt: userAccount.createdAt,
-              email: userAccount.email,
-              id: userAccount.id,
-              username: userAccount.username,
-              role: userAccount.role,
-              code: userAccount.customConfirmationToken,
-            },
-            details: userInfo,
-            models: userInfo.editor_videos,
-          };
+
+          if (userInfo) {
+            userInfo.user_account = undefined;
+            userInfo.editor_videos = undefined;
+
+            const editorVideo = await strapi.db
+              .query("api::editor-video.editor-video")
+              .findMany({
+                populate: true,
+                where: {
+                  user_info: userInfo.id,
+                },
+              });
+
+            if (editorVideo)
+              editorVideo.map((x) => {
+                x.user_info = undefined;
+              });
+
+            return {
+              jwt:
+                userAccount.role.type === "editor"
+                  ? process.env.STRAPI_ADMIN_API_EDITOR_TOKEN_SALT
+                  : process.env.STRAPI_ADMIN_API_CREATOR_TOKEN_SALT,
+              user: {
+                createdAt: userAccount.createdAt,
+                email: userAccount.email,
+                id: userAccount.id,
+                username: userAccount.username,
+                role: userAccount.role,
+                code: userAccount.customConfirmationToken,
+              },
+              details: userInfo,
+              models: editorVideo,
+            };
+          } else return "account details not found";
         } else return "token expired";
       } else return "account not found";
     }

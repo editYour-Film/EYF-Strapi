@@ -81,9 +81,8 @@
     },
     "video_tags": {
       "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::video-tag.video-tag",
-      "inversedBy": "editor_videos"
+      "relation": "oneToMany",
+      "target": "api::video-tag.video-tag"
     },
     "is_highlighted": {
       "type": "boolean",
@@ -91,6 +90,18 @@
     },
     "description": {
       "type": "text"
+    },
+    "video_softwares": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::video-software.video-software"
+    },
+    "audio": {
+      "type": "string"
+    },
+    "approved": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

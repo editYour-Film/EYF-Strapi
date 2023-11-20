@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "video_softwares",
+  "info": {
+    "singularName": "video-software",
+    "pluralName": "video-softwares",
+    "displayName": "video software"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    }
+  }
+}
