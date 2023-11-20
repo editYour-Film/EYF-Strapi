@@ -4,7 +4,8 @@
   "info": {
     "singularName": "video-software",
     "pluralName": "video-softwares",
-    "displayName": "video software"
+    "displayName": "video software",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -13,6 +14,10 @@
   "attributes": {
     "label": {
       "type": "string"
+    },
+    "approved": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
