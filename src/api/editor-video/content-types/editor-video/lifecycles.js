@@ -33,6 +33,16 @@ module.exports = {
         subject: "Votre modèle a été publié",
         text: user.user_account.username + "\nVotre modèle a été publié",
       });
+
+      await strapi.query('api::notification.notification').create({
+        data: {
+          type: "message",
+          title: "Votre modèle a été validé par notre équipe",
+          description: "Félicitations votre modèle est maintenant visible depuis le catalogue et peut être ajouté à un devis.",
+          date: new Date(),
+          user: user.id,
+        }
+      });
     }
   }
 }
