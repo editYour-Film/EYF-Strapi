@@ -30,8 +30,8 @@ module.exports = {
       await strapi.plugins["email"].services.email.send({
         to: user.user_account.email,
         from: process.env.STRAPI_ADMIN_EMAIL_SENDER,
-        subject: "Votre modèle a été publié",
-        text: user.user_account.username + "\nVotre modèle a été publié",
+        subject: "Votre modèle a été validé par notre équipe",
+        text: user.user_account.username + "\nFélicitations votre modèle est maintenant visible depuis le catalogue et peut être ajouté à un devis.",
       });
 
       await strapi.query('api::notification.notification').create({
