@@ -19,7 +19,8 @@
         "all-editor",
         "all-client",
         "message",
-        "mission"
+        "mission",
+        "video"
       ],
       "required": true
     },

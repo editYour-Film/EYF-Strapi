@@ -36,7 +36,7 @@ module.exports = {
 
       await strapi.query('api::notification.notification').create({
         data: {
-          type: "message",
+          type: "video",
           title: "Votre modèle a été validé par notre équipe",
           description: "Félicitations votre modèle est maintenant visible depuis le catalogue et peut être ajouté à un devis.",
           date: new Date(),
