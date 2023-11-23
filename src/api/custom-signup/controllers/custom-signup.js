@@ -143,7 +143,7 @@ module.exports = {
               f_name: ctx.request.body.f_name,
               l_name: ctx.request.body.l_name,
               bio: ctx.request.body.description,
-              languages: ctx.request.body["languages[]"],
+              lang_spoken: ctx.request.body.lang_spoken,
               skills: ctx.request.body["skills[]"],
             },
           });
