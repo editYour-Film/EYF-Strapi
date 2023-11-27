@@ -4,10 +4,11 @@
   "info": {
     "singularName": "newsletter-section",
     "pluralName": "newsletter-sections",
-    "displayName": "Newsletter section"
+    "displayName": "Newsletter section",
+    "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
