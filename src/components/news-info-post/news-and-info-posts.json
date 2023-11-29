@@ -1,7 +1,8 @@
 {
   "collectionName": "components_news_info_post_news_and_info_posts",
   "info": {
-    "displayName": "news & info posts"
+    "displayName": "news & info posts",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -30,6 +31,11 @@
     },
     "link": {
       "type": "text"
+    },
+    "article": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::article.article"
     }
   }
 }
