@@ -17,6 +17,11 @@
       "type": "component",
       "repeatable": false,
       "component": "info-card.info-card"
+    },
+    "articles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article.article"
     }
   }
 }
