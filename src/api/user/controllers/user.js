@@ -13,6 +13,8 @@ module.exports = {
   },
 
   async validateUserByCode(ctx, next) {
+    const noExpire = ctx.request.body.noExpire;
+
     if (ctx.request.body.code && ctx.request.body.code.length > 0) {
       // check user
       const userAccount = await strapi.db
@@ -25,7 +27,7 @@ module.exports = {
       if (userAccount) {
         const date = Date.parse(new Date());
         const tokenExpire = Date.parse(userAccount.expire);
-        if (date < tokenExpire) {
+        if (noExpire || date < tokenExpire) {
           const userInfo = await strapi.db
             .query("api::user-info.user-info")
             .findOne({
