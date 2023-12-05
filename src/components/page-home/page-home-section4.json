@@ -15,13 +15,14 @@
     "text": {
       "type": "text"
     },
-    "img": {
-      "allowedTypes": [
-        "images"
-      ],
+    "media": {
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
     }
   }
 }
