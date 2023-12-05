@@ -74,6 +74,12 @@
       "type": "component",
       "repeatable": false,
       "component": "page-home.comparison-section"
+    },
+    "transition_mockup": {
+      "displayName": "Transition Mockup",
+      "type": "component",
+      "repeatable": false,
+      "component": "page-home.transition-mockup"
     }
   }
 }
