@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_page_home_transition_mockups",
+  "info": {
+    "displayName": "Transition Mockup",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "text1_line1": {
+      "type": "string"
+    },
+    "text2_line1": {
+      "type": "string"
+    },
+    "text1_line2": {
+      "type": "string"
+    },
+    "text2_line2": {
+      "type": "string"
+    }
+  }
+}
