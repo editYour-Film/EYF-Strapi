@@ -27,6 +27,11 @@
     },
     "creator": {
       "type": "string"
+    },
+    "editor_video": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::editor-video.editor-video"
     }
   }
 }
