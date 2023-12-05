@@ -9,7 +9,7 @@
     "title": {
       "type": "string"
     },
-    "subtitle": {
+    "suptitle": {
       "type": "string"
     },
     "text_list": {
