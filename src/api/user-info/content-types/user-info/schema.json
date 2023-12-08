@@ -71,6 +71,11 @@
     },
     "lang_spoken": {
       "type": "string"
+    },
+    "picked_models": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::editor-video.editor-video"
     }
   }
 }
