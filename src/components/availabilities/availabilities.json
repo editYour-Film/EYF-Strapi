@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_availabilities_availabilities",
+  "info": {
+    "displayName": "availabilities"
+  },
+  "options": {},
+  "attributes": {
+    "start": {
+      "type": "date"
+    },
+    "end": {
+      "type": "date"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "available",
+        "booked"
+      ]
+    }
+  }
+}
