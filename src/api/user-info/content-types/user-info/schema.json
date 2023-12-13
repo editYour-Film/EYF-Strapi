@@ -76,6 +76,12 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::editor-video.editor-video"
+    },
+    "availabilities": {
+      "displayName": "availabilities",
+      "type": "component",
+      "repeatable": true,
+      "component": "availabilities.availabilities"
     }
   }
 }
