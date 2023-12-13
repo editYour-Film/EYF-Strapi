@@ -13,14 +13,18 @@ module.exports = [
             "data:",
             "blob:",
             "market-assets.strapi.io",
-            "edityourfilm.s3.fr-par.scw.cloud",
+            process.env.ENV === "prod"
+              ? "edityourfilm-prod.s3.fr-par.scw.cloud"
+              : "edityourfilm.s3.fr-par.scw.cloud", // should be changed to "edityourfilm-dev.s3.fr-par.scw.cloud",
           ],
           "media-src": [
             "'self'",
             "data:",
             "blob:",
             "market-assets.strapi.io",
-            "edityourfilm.s3.fr-par.scw.cloud",
+            process.env.ENV === "prod"
+              ? "edityourfilm-prod.s3.fr-par.scw.cloud"
+              : "edityourfilm.s3.fr-par.scw.cloud", // should be changed to "edityourfilm-dev.s3.fr-par.scw.cloud",
           ],
           upgradeInsecureRequests: null,
         },
