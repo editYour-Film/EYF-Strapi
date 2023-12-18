@@ -1,0 +1,28 @@
+{
+  "kind": "singleType",
+  "collectionName": "invoices",
+  "info": {
+    "singularName": "invoice",
+    "pluralName": "invoices",
+    "displayName": "Invoice",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "daily_price": {
+      "type": "integer"
+    },
+    "basic_coef": {
+      "type": "float"
+    },
+    "medium_coef": {
+      "type": "float"
+    },
+    "complex_coef": {
+      "type": "float"
+    }
+  }
+}
