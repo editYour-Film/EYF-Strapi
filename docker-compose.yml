@@ -2,7 +2,7 @@ version: '3'
 
 services:
   eyf-strapi:
-    container_name: eyf-strapi
+    container_name: strapi
     build: .
     image: eyf-strapi:latest
     restart: unless-stopped
@@ -33,7 +33,7 @@ services:
       - eyf-strapiDB
       
   eyf-strapiDB:
-    container_name: eyf-strapiDB
+    container_name: strapiDB
     platform: linux/amd64 #for platform error on Apple M1 chips
     restart: unless-stopped
     env_file: .env
@@ -52,7 +52,7 @@ services:
       - eyf-strapi
       
   eyf-strapiAdminer:
-    container_name: eyf-strapiAdminer
+    container_name: strapiAdminer
     image: adminer
     restart: unless-stopped
     ports:
