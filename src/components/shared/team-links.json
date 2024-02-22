@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_team_links",
+  "info": {
+    "displayName": "team-links"
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "linkedin",
+        "github"
+      ]
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}

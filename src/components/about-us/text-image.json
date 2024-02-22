@@ -28,6 +28,14 @@
     },
     "rich_content": {
       "type": "richtext"
+    },
+    "img2": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
     }
   }
 }

@@ -6,17 +6,18 @@
   },
   "options": {},
   "attributes": {
-    "arrow_card": {
-      "displayName": "arrow card",
-      "type": "component",
-      "repeatable": true,
-      "component": "about-us.arrow-card"
-    },
     "title": {
       "type": "string"
     },
-    "suptitle": {
-      "type": "string"
+    "content": {
+      "type": "text"
+    },
+    "img": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
