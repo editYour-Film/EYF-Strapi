@@ -58,6 +58,11 @@
       "type": "component",
       "repeatable": true,
       "component": "about-us.texte-et-description"
+    },
+    "team": {
+      "type": "component",
+      "repeatable": false,
+      "component": "about-us.team"
     }
   }
 }

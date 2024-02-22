@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_shared_team_member",
+  "info": {
+    "displayName": "Team",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "position": {
+      "type": "string"
+    },
+    "img": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "links": {
+      "displayName": "Links",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.team-links"
+    }
+  }
+}
