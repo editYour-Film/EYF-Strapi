@@ -18,6 +18,11 @@
     "slug": {
       "type": "uid",
       "targetField": "category"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
     }
   }
 }
