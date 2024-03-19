@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_partners",
+  "info": {
+    "displayName": "Partners",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "partner": {
+      "displayName": "partner",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.partner-infos"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

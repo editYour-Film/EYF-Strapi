@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_partner-infos",
+  "info": {
+    "displayName": "partner-infos"
+  },
+  "options": {},
+  "attributes": {
+    "logo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
