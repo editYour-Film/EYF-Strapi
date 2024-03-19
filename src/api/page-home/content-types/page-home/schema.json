@@ -80,6 +80,12 @@
       "type": "component",
       "repeatable": false,
       "component": "page-home.transition-mockup"
+    },
+    "partners": {
+      "displayName": "Partners",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.partners"
     }
   }
 }
