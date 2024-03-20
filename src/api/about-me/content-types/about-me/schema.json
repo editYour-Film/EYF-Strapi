@@ -63,6 +63,11 @@
       "type": "component",
       "repeatable": false,
       "component": "about-us.team"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
     }
   }
 }
