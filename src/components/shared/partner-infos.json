@@ -1,16 +1,25 @@
 {
   "collectionName": "components_shared_partner-infos",
   "info": {
-    "displayName": "partner-infos"
+    "displayName": "partner-infos",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "orientation": {
+      "type": "enumeration",
+      "enum": [
+        "vertical",
+        "horizontal"
+      ]
     }
   }
 }
