@@ -7,13 +7,14 @@ module.exports = [
       contentSecurityPolicy: {
         useDefaults: true,
         directives: {
-          "connect-src": ["'self'", "https:"],
+          "connect-src": ["'self'", "https:", "*"],
           "img-src": [
             "'self'",
             "data:",
             "blob:",
             "market-assets.strapi.io",
             "edityourfilm.s3.fr-par.scw.cloud",
+            "*",
           ],
           "media-src": [
             "'self'",
@@ -21,6 +22,7 @@ module.exports = [
             "blob:",
             "market-assets.strapi.io",
             "edityourfilm.s3.fr-par.scw.cloud",
+            "*",
           ],
           upgradeInsecureRequests: null,
         },
